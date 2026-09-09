@@ -30,5 +30,8 @@
 - 2026-09-09 issue #8625 (test report behavior) — pr-opened — fork PR #1 open; don't re-open same fix.
 - 2026-09-09 issue #9623 (friend-paths) — dropped — upstream PR #9626 already open; don't duplicate.
 
+- 2026-09-09 dead links (droidcon talk, ReportingExtension path, galler.dev article) — pr-opened — fork PR #21 (fix/talks-docs-dead-links), 2 files / 3-link fix, fork CI CLEAN. Don't re-pick these three.
+
 ## Mined gaps (discovered, not yet attempted)
-- 2026-09-09 dead links in docs (README.md + website/src/pages/changelog.mdx), curl-re-verified: droidcon State-of-the-Union -> YouTube G8S8A2uSapM (404->200); ReportingExtension.kt old `io/gitlab/...` path (404->200 `dev/detekt/...`); galler.dev article NXDOMAIN -> Wayback snapshot. — status: proposed
+- 2026-09-09 dead links in docs (README.md + website/src/pages/changelog.mdx), curl-re-verified: droidcon State-of-the-Union -> YouTube G8S8A2uSapM (404->200); ReportingExtension.kt old `io/gitlab/...` path (404->200 `dev/detekt/...`); galler.dev article NXDOMAIN -> Wayback snapshot. — status: attempted/pr-opened
+
