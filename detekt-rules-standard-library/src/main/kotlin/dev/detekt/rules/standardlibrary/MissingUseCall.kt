@@ -94,7 +94,6 @@ class MissingUseCall(config: Config) :
         )
     )
 
-    private val traversedParentExpression: MutableSet<PsiElement> = mutableSetOf()
     private val usedReferences: MutableSet<KaSymbol> = mutableSetOf()
 
     override fun visitCallExpression(expression: KtCallExpression) {
@@ -180,14 +179,14 @@ class MissingUseCall(config: Config) :
                 false
             }
 
-            expressionParent is KtProperty -> {
-                traversedParentExpression.contains(expressionParent.children.getOrNull(0)).not()
+            expressionParent.parent is KtProperty -> {
+                isExpressionUsedOnSameOrNextLine(expression).not()
             }
 
             else -> {
                 true
             }
-        }.also { traversedParentExpression.add(expressionParent) }
+        }
     }
 
     @OptIn(KaContextParameterApi::class)
