@@ -1,5 +1,5 @@
 # detekt/detekt context
-> refreshed 2026-09-09 07:11 UTC | upstream default: main @ 733ac76c40
+> refreshed 2026-09-25 00:00 UTC | upstream default: main @ e3c5b3ed68
 
 ## Identity & policies
 - upstream: detekt/detekt, default branch `main`, primary language Kotlin/JVM. English-first: yes (all issues, docs, maintainer conversation in English).
@@ -26,11 +26,14 @@
 - #9074 (NullableToStringCall false positive) — real; maintainer asked for a reproducer test; Gradle-platform-type case hard to reproduce in sandbox.
 - #8783 (forbidden method config docs single source of truth) — open, `help wanted`, but spans whole website docs; risky scope.
 
+- #9721 (MissingUseCall false positive on separated usage) — real, reproducible, fixed in fork PR (branch `fix/missing-use-call-separated-usage`): `val repo = createGitRepository(); repo.use(block)` was spuriously flagged. Verified repro before fix; 3 new specs; module tests + detektMain/detektTest green. Maintainer `dzirbel` engaged. Known related limitation (not fixed): `checkNotNull(closeableVariable).use {}` indirection still flagged — deeper dataflow, left as follow-up (issue #9122 handled the inline-call form).
+
 ## Gap ledger (dedupe — READ FIRST, never re-pick)
 - 2026-09-09 issue #8625 (test report behavior) — pr-opened — fork PR #1 open; don't re-open same fix.
 - 2026-09-09 issue #9623 (friend-paths) — dropped — upstream PR #9626 already open; don't duplicate.
 
 - 2026-09-09 dead links (droidcon talk, ReportingExtension path, galler.dev article) — pr-opened — fork PR #21 (fix/talks-docs-dead-links), 2 files / 3-link fix, fork CI CLEAN. Don't re-pick these three.
+- 2026-09-25 issue #9721 (MissingUseCall separated-usage false positive) — pr-opened — fork PR (fix/missing-use-call-separated-usage): do not report when a Closeable assigned to a local property is later used with `use`. Don't re-pick.
 
 ## Mined gaps (discovered, not yet attempted)
 - 2026-09-09 dead links in docs (README.md + website/src/pages/changelog.mdx), curl-re-verified: droidcon State-of-the-Union -> YouTube G8S8A2uSapM (404->200); ReportingExtension.kt old `io/gitlab/...` path (404->200 `dev/detekt/...`); galler.dev article NXDOMAIN -> Wayback snapshot. — status: attempted/pr-opened
