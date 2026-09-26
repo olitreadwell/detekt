@@ -206,7 +206,7 @@ Thanks to all the people who contributed to detekt!
 As mentioned in...
 
 - [To Detekt 2.0, and beyond!](https://www.youtube.com/watch?v=6EQd_SDR6n0)
-- [droidcon London 2021 - Detekt - State of the Union](https://www.droidcon.com/2021/11/17/detekt-state-of-the-union-2/)
+- [droidcon London 2021 - Detekt - State of the Union](https://www.youtube.com/watch?v=G8S8A2uSapM)
 - [KotlinConf 2018 - Safe(r) Kotlin Code - Static Analysis Tools for Kotlin by Marvin Ramin](https://www.youtube.com/watch?v=yjhQiP0329M)
 - [droidcon NYC 2018 - Static Code Analysis For Kotlin](https://www.youtube.com/watch?v=LT6m5_LO2DQ)
 - Kotlin on Code Quality Tools - by @vanniktech [Slides](https://docs.google.com/presentation/d/1sUoQCRHTR01JfaS67Qkd7K1rdRLOhO6QGCelZZwxOKs/edit) [Presentation](https://www.youtube.com/watch?v=FKDNE6PPTTE)
@@ -214,7 +214,7 @@ As mentioned in...
 - [Check the quality of Kotlin code](https://blog.frankel.ch/check-quality-kotlin-code/)
 - [Kotlin Static Analysis Tools](http://smyachenkov.com/posts/kotlin-static-analysis-tools/)
 - [Are you still smelling it?: A comparative study between Java and Kotlin language](https://doi.org/10.1145/3267183.3267186) by [Flauzino et al.](https://github.com/matheusflauzino/smells-experiment-Kotlin-and-Java)
-- [Preventing software antipatterns with Detekt](https://galler.dev/preventing-software-antipatterns-with-detekt/)
+- [Preventing software antipatterns with Detekt](https://web.archive.org/web/20260511085627/https://galler.dev/preventing-software-antipatterns-with-detekt/)
 
 Integrations:
 
