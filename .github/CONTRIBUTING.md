@@ -11,7 +11,7 @@
 - We use [JUnit 5](https://junit.org/junit5/docs/current/user-guide/) for testing. Please use the `Spec.kt` suffix on
   new test classes. If your new rule requires type resolution (i.e. it utilises `BindingContext`) then annotate your
   test class with `@KotlinCoreEnvironmentTest` and have the test class accept `KotlinCoreEnvironment` as a parameter.
-  See "Testing a rule that uses type resolution" section of the [Using Type Resolution](../website/docs/gettingstarted/type-resolution.md)
+  See "Testing a rule that uses type resolution" section of the [Using Type Resolution](../website/docs/gettingstarted/type-resolution.mdx)
   guide for details.
 - The code in `detekt-api` and any rule in `detekt-rules` must be documented. We generate documentation for our website based on these modules.
 - If some Kotlin code in `resources` folder (like `detekt-rules-ktlint-wrapper`) shows a compilation error, right click on it and use `Mark as plain text`.
@@ -76,7 +76,7 @@ Rules annotated with `@ActiveByDefault` will be marked as active in the `default
 Generally, this will not be the case for new rules.
 
 A rule that requires type resolution must implements `RequiresFullAnalysis`.
-See [the type resolution wiki page](../website/docs/gettingstarted/type-resolution.md) for
+See [the type resolution wiki page](../website/docs/gettingstarted/type-resolution.mdx) for
 more detail on this topic.
 
 The rule defined above will translate to a rule entry in the `default-detekt-config.yml`:
@@ -332,7 +332,7 @@ You must follow the steps below:
 More information on this process could be found on the [official Develocity documentation][8].
 
 [1]: https://github.com/detekt/detekt/blob/v1.19.0/detekt-api/src/main/kotlin/io/gitlab/arturbosch/detekt/api/Issue.kt
-[2]: https://github.com/detekt/detekt/blob/v1.19.0/detekt-api/src/main/kotlin/io/gitlab/arturbosch/detekt/api/Finding.kt
+[2]: https://github.com/detekt/detekt/blob/v1.19.0/detekt-api/src/main/kotlin/io/gitlab/arturbosch/detekt/api/Findings.kt
 [3]: https://kotlinlang.org/docs/kotlin-doc.html
 [4]: https://daringfireball.net/projects/markdown/syntax
 [5]: https://kotlinlang.org/docs/functions.html#named-arguments

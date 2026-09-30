@@ -28,7 +28,7 @@ When adding a custom issue to the xml file, make sure the `RuleID` should be sel
 ```
 
 #### CLI
-To generate yourself a `baseline.xml` you need to provide the same config as the the rules you are going to scan your project.
+To generate yourself a `baseline.xml` you need to provide the same config as the rules you are going to scan your project.
 
 ```diff
 java -jar detekt-cli-all.jar \
