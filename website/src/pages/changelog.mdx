@@ -30,7 +30,7 @@ This is a point release for Detekt `1.23.0`, built against Kotlin `2.0.21`, with
 - Fix `ThrowingExceptionsWithoutMessageOrCause` false positive - [#7715](https://github.com/detekt/detekt/pull/7715)
 - Issue #7634: Make `UndocumentedPublicClass` configurable to flag `com… - [#7635](https://github.com/detekt/detekt/pull/7635)
 - Fix redundant empty tags in baseline XML - [#7625](https://github.com/detekt/detekt/pull/7625)
-- MatchingDeclarationName now supports platofrm suffixes - [#6426](https://github.com/detekt/detekt/pull/6426)
+- MatchingDeclarationName now supports platform suffixes - [#6426](https://github.com/detekt/detekt/pull/6426)
 
 ##### Contributors
 
@@ -136,7 +136,7 @@ got reported by the community.
 -   Don't report FunctionNaming when the function's name equals to the return type's name with type arguments - [#6605](https://github.com/detekt/detekt/pull/6605)
 -   Fix issues related to kotlin-stdlib's Gradle module metadata in Kotlin 1.9.20 - [#6590](https://github.com/detekt/detekt/pull/6590)
 -   MethodSignature - Add the condition of receiver should be null - [#6570](https://github.com/detekt/detekt/pull/6570)
--   Remove check for deprectated functions toUpperCase and toLowerCase - [#6548](https://github.com/detekt/detekt/pull/6548)
+-   Remove check for deprecated functions toUpperCase and toLowerCase - [#6548](https://github.com/detekt/detekt/pull/6548)
 -   Fixes false positive of trailing whitespaces in kdoc - [#6370](https://github.com/detekt/detekt/pull/6370)
 
 ##### Dependency Updates
@@ -207,7 +207,7 @@ got reported by the community.
 -   Allow documenting public fun name when same private variable is present - [#6165](https://github.com/detekt/detekt/pull/6165)
 -   Find range call using recursion - [#6164](https://github.com/detekt/detekt/pull/6164)
 -   StringShouldBeRawString: Ignore `replaceIndent` and `prependIndent` - [#6154](https://github.com/detekt/detekt/pull/6154)
--   UnusedPrivateProperty: Fix false postive by ignoring data classes - [#6151](https://github.com/detekt/detekt/pull/6151)
+-   UnusedPrivateProperty: Fix false positive by ignoring data classes - [#6151](https://github.com/detekt/detekt/pull/6151)
 -   PropertyUsedBeforeDeclaration: fix false positive in nested/inner class - [#6139](https://github.com/detekt/detekt/pull/6139)
 
 ##### Dependency Updates
@@ -328,7 +328,7 @@ We would like to thank the following contributors that made this release possibl
 -   Boy Scout - [#5808](https://github.com/detekt/detekt/pull/5808)
 -   Simplify `TestConfig` usages - [#5801](https://github.com/detekt/detekt/pull/5801)
 -   Reduce configuration of UnusedPrivateMember's split rules - [#5800](https://github.com/detekt/detekt/pull/5800)
--   Force SerialVerionUID to be private - [#5798](https://github.com/detekt/detekt/pull/5798)
+-   Force SerialVersionUID to be private - [#5798](https://github.com/detekt/detekt/pull/5798)
 -   Exclude the KMP test folders for android - [#5797](https://github.com/detekt/detekt/pull/5797)
 -   Add aliases for PackageNaming and InvalidPackageDeclaration - [#5795](https://github.com/detekt/detekt/pull/5795)
 -   Forbid using Jupiter Kotlin assertions - [#5794](https://github.com/detekt/detekt/pull/5794)
@@ -810,7 +810,7 @@ Because of this, some users might have to **recreate their baseline** as the loc
 -   ExplicitCollectionElementAccessMethod: fix false positive for get operators with type parameters - [#4803](https://github.com/detekt/detekt/pull/4803)
 -   Add tests for #4786 - [#4801](https://github.com/detekt/detekt/pull/4801)
 -   Add documentation link for rules in html report - [#4799](https://github.com/detekt/detekt/pull/4799)
--   Improve rule documentaion and smell message of NamedArguments - [#4796](https://github.com/detekt/detekt/pull/4796)
+-   Improve rule documentation and smell message of NamedArguments - [#4796](https://github.com/detekt/detekt/pull/4796)
 -   Improve issue description and smell message of DestructuringDeclarationWithTooManyEntries - [#4795](https://github.com/detekt/detekt/pull/4795)
 -   NestedScopeFunctions - Add rule for nested scope functions - [#4788](https://github.com/detekt/detekt/pull/4788)
 -   Partially drop redundant usage of "dry run" in Gradle plugin tests - [#4776](https://github.com/detekt/detekt/pull/4776)
@@ -855,7 +855,7 @@ Because of this, some users might have to **recreate their baseline** as the loc
 -   Fix `ComplexMethod` debt and refactor code - [#5029](https://github.com/detekt/detekt/pull/5029)
 -   Fix ReturnCount debt and refactor code - [#5026](https://github.com/detekt/detekt/pull/5026)
 -   Add test for ForbiddenMethodCall with getters - [#5018](https://github.com/detekt/detekt/pull/5018)
--   Measure flakyness on Windows CI - [#4742](https://github.com/detekt/detekt/pull/4742)
+-   Measure flakiness on Windows CI - [#4742](https://github.com/detekt/detekt/pull/4742)
 -   Declare nested test classes as non-static - [#4894](https://github.com/detekt/detekt/pull/4894)
 -   Remove deprecated usages in gradle-plugin test - [#4889](https://github.com/detekt/detekt/pull/4889)
 -   Remove reference to contributor list - [#4871](https://github.com/detekt/detekt/pull/4871)
@@ -866,7 +866,7 @@ Because of this, some users might have to **recreate their baseline** as the loc
 -   Add more tests for Annotation Suppressor - [#4774](https://github.com/detekt/detekt/pull/4774)
 -   fix: add test case that fails if environment is not properly set up - [#4769](https://github.com/detekt/detekt/pull/4769)
 -   Disable UnusedImports for the detekt project - [#4741](https://github.com/detekt/detekt/pull/4741)
--   Remove Unnecesary @Nested - [#4740](https://github.com/detekt/detekt/pull/4740)
+-   Remove Unnecessary @Nested - [#4740](https://github.com/detekt/detekt/pull/4740)
 -   Update the argsfile to unblock `runWithArgsFile` failing locally - [#4718](https://github.com/detekt/detekt/pull/4718)
 
 See all issues at: [1.21.0](https://github.com/detekt/detekt/milestone/86)
@@ -953,7 +953,7 @@ us release this new version of detekt. You're more than welcome to join our comm
 -   Fix false positive of UnnecessaryInnerClass - [#4509](https://github.com/detekt/detekt/pull/4509)
 -   [MaxLineLength] Fix signature in for blank characters in the Baseline - [#4504](https://github.com/detekt/detekt/pull/4504)
 -   Fix overridden function reporting for CanBeNonNullable rule - [#4497](https://github.com/detekt/detekt/pull/4497)
--   Set the name of functions and paramenters between ` to improve the readability - [#4488](https://github.com/detekt/detekt/pull/4488)
+-   Set the name of functions and parameters between ` to improve the readability - [#4488](https://github.com/detekt/detekt/pull/4488)
 -   update InvalidPackageDeclaration to report if rootPackage is not present - [#4484](https://github.com/detekt/detekt/pull/4484)
 -   [VarCouldBeVal] Override vars will not be flagged if bindingContext is not set - [#4477](https://github.com/detekt/detekt/pull/4477)
 -   Document the overlapping rules from `formatting` - [#4473](https://github.com/detekt/detekt/pull/4473)
@@ -1215,7 +1215,7 @@ tasks.detektMain {
 -   Don't hide null issues - [#4313](https://github.com/detekt/detekt/pull/4313)
 -   Add functional test for type resolution for JVM - [#4307](https://github.com/detekt/detekt/pull/4307)
 -   Minor typo fix and code refactoring - [#4284](https://github.com/detekt/detekt/pull/4284)
--   Improve Tests of UnnecesaryLet - [#4282](https://github.com/detekt/detekt/pull/4282)
+-   Improve Tests of UnnecessaryLet - [#4282](https://github.com/detekt/detekt/pull/4282)
 -   Fix typo in UnnecessaryLet - [#4281](https://github.com/detekt/detekt/pull/4281)
 -   Fix typo in Gradle lib definition - [#4255](https://github.com/detekt/detekt/pull/4255)
 -   Rename DoubleMutabilityInCollectionSpec to DoubleMutabilityForCollectionSpec - [#4251](https://github.com/detekt/detekt/pull/4251)
@@ -1239,7 +1239,7 @@ tasks.detektMain {
 -   Address feedback on #4139 - [#4143](https://github.com/detekt/detekt/pull/4143)
 -   Don't skip tests that now pass - [#4142](https://github.com/detekt/detekt/pull/4142)
 -   Fixes for Kotlin 1.6.0-M1 - [#4139](https://github.com/detekt/detekt/pull/4139)
--   Don't unnecessarily propogate opt-in requirement - [#4116](https://github.com/detekt/detekt/pull/4116)
+-   Don't unnecessarily propagate opt-in requirement - [#4116](https://github.com/detekt/detekt/pull/4116)
 -   Drop junit-platform-launcher dependency - [#4115](https://github.com/detekt/detekt/pull/4115)
 -   Ensure detekt-tooling public API is stable - [#4112](https://github.com/detekt/detekt/pull/4112)
 -   Fix globing typo - [#4107](https://github.com/detekt/detekt/pull/4107)
@@ -1550,7 +1550,7 @@ Moreover we included a couple of false positive fixes for `NoNameShadowing` and 
 -   Update config file due to invalid argument - [#3735](https://github.com/detekt/detekt/pull/3735)
 -   Skip Multiplatform iOS tests if XCode is not configured - [#3734](https://github.com/detekt/detekt/pull/3734)
 -   Specify Java language level in module plugin - [#3732](https://github.com/detekt/detekt/pull/3732)
--   Don't run unnecesary tasks - [#3725](https://github.com/detekt/detekt/pull/3725)
+-   Don't run unnecessary tasks - [#3725](https://github.com/detekt/detekt/pull/3725)
 -   Remove --stacktrace now that we have scan - [#3724](https://github.com/detekt/detekt/pull/3724)
 -   Drop JCenter usage from detekt's own build - [#3711](https://github.com/detekt/detekt/pull/3711)
 -   Publish build scans for all CI builds - [#3710](https://github.com/detekt/detekt/pull/3710)
@@ -1986,7 +1986,7 @@ The 1.13.0 release got corrupted and should not be used.
 -   Print filtered paths in debug mode for easier bug tracing - [#3022](https://github.com/detekt/detekt/pull/3022)
 -   Unused import not detected - [#3020](https://github.com/detekt/detekt/issues/3020)
 -   Include reports and formatting features to the system test - [#3018](https://github.com/detekt/detekt/pull/3018)
--   detektGenerateConfig ignores detekt.config paramenter - [#2565](https://github.com/detekt/detekt/issues/2565)
+-   detektGenerateConfig ignores detekt.config parameter - [#2565](https://github.com/detekt/detekt/issues/2565)
 -   Treat config property deprecations as errors - [#2545](https://github.com/detekt/detekt/issues/2545)
 -   Print filtered paths in debug mode - [#869](https://github.com/detekt/detekt/issues/869)
 
@@ -2220,7 +2220,7 @@ See all issues at: [1.11.0-RC1](https://github.com/detekt/detekt/milestone/69)
 
 ##### Notable Changes
 
--   New rules: `IgnoredReturnValue`, `ImplictUnitReturnType`
+-   New rules: `IgnoredReturnValue`, `ImplicitUnitReturnType`
 -   The complexity report (console/html) now calculates the [cognitive complexity metric](https://www.sonarsource.com/docs/CognitiveComplexity.pdf) for your project.
 -   Issues at functions and classes are now reported at the identifiers. This is especially helpful in the IntelliJ plugin.
 -   Extension authors can now manipulate the findings with the new [ReportingExtension](https://github.com/detekt/detekt/blob/main/detekt-api/src/main/kotlin/io/gitlab/arturbosch/detekt/api/ReportingExtension.kt).
@@ -2235,7 +2235,7 @@ See all issues at: [1.11.0-RC1](https://github.com/detekt/detekt/milestone/69)
 
 -   We fixed a regression in baseline signatures. This breaks baseline ids for reported issues at functions for some rules. You may need to regenerate the baseline file or manually change the ids. We are very sorry for this inconvenience.
 -   KtLint replaced their default `Indentation` rule. Expect new formatting issues here!
--   We removed `HierachicalConfig` interface. It was deprecated in 1.7.0 and could lead to OOM errors when reusing `Config`
+-   We removed `HierarchicalConfig` interface. It was deprecated in 1.7.0 and could lead to OOM errors when reusing `Config`
     embedding detekt.
     If you used `Config.parent.key` in your code, `Config.parentPath` is an alternative for this interface.
 -   We are dropping the thin wrapper tasks over Intellij's `inspections.sh` and `format.sh`.
@@ -2263,7 +2263,7 @@ See all issues at: [1.11.0-RC1](https://github.com/detekt/detekt/milestone/69)
 -   Report ComplexInterface issues at identifiers - [#2786](https://github.com/detekt/detekt/pull/2786)
 -   Construct signatures based on named declaration instead of just the identifier - [#2785](https://github.com/detekt/detekt/pull/2785)
 -   KtLint to 0.37.1 - [#2783](https://github.com/detekt/detekt/pull/2783)
--   Implement new rule ImplictUnitReturnTypet - [#2781](https://github.com/detekt/detekt/pull/2781)
+-   Implement new rule ImplicitUnitReturnType - [#2781](https://github.com/detekt/detekt/pull/2781)
 -   Feature/restrict is properties - [#2779](https://github.com/detekt/detekt/pull/2779)
 -   Rename Blacklist and Whitelist to be self explanatory - [#2778](https://github.com/detekt/detekt/pull/2778)
 -   Remove deprecated HierarchicalConfig which could lead to OOM when reusing Config objects - [#2768](https://github.com/detekt/detekt/pull/2768)
@@ -2426,7 +2426,7 @@ See all issues at: [1.9.0](https://github.com/detekt/detekt/milestone/65)
 -   Incorrect (or unclear) EmptyCatchBlock rule - [#2602](https://github.com/detekt/detekt/issues/2602)
 -   Use more lintAndCompile - [#2601](https://github.com/detekt/detekt/pull/2601)
 -   MagicNumber>ignoredNumbers allow yaml list - [#2600](https://github.com/detekt/detekt/pull/2600)
--   Remove unnecesary symbolic link - [#2598](https://github.com/detekt/detekt/pull/2598)
+-   Remove unnecessary symbolic link - [#2598](https://github.com/detekt/detekt/pull/2598)
 -   WildcardImport>excludeImports allow yaml list - [#2596](https://github.com/detekt/detekt/pull/2596)
 -   ForbiddenClassName>forbiddenName allow yaml list - [#2595](https://github.com/detekt/detekt/pull/2595)
 -   Fix false positives in UndocumentedPublicProperty - [#2591](https://github.com/detekt/detekt/pull/2591)
@@ -2482,7 +2482,7 @@ See all issues at: [1.7.4](https://github.com/detekt/detekt/milestone/64)
 -   UseCheckOrError/UseRequire: fix false positive with a non-String argument - [#2556](https://github.com/detekt/detekt/pull/2556)
 -   InstanceOfCheckForException: do not report when catch blocks do not check for the subtype of an exception - [#2555](https://github.com/detekt/detekt/pull/2555)
 -   Include statistics for our custom detekt tasks - [#2554](https://github.com/detekt/detekt/pull/2554)
--   Remove unnecesary parentheses - [#2553](https://github.com/detekt/detekt/pull/2553)
+-   Remove unnecessary parentheses - [#2553](https://github.com/detekt/detekt/pull/2553)
 -   Fix console output indentation - [#2552](https://github.com/detekt/detekt/pull/2552)
 -   Console output is not indented correctly - [#2551](https://github.com/detekt/detekt/issues/2551)
 -   Check jcenter repository present in Gradle plugin - [#2550](https://github.com/detekt/detekt/pull/2550)
@@ -2842,7 +2842,7 @@ See all issues at: [1.4.0](https://github.com/detekt/detekt/milestone/55)
 #### 1.3.1
 
 -   Remove old unused documentation - [#2210](https://github.com/detekt/detekt/pull/2210)
--   Show code snippet erros in html reports - [#2209](https://github.com/detekt/detekt/pull/2209)
+-   Show code snippet errors in html reports - [#2209](https://github.com/detekt/detekt/pull/2209)
 -   Use compileAndLint in UnusedPrivateClassSpec - [#2208](https://github.com/detekt/detekt/pull/2208)
 -   Fix false positive in UnusedPrivateClass - [#2207](https://github.com/detekt/detekt/pull/2207)
 -   Update readme promoting new properties of the gradle plugin - [#2205](https://github.com/detekt/detekt/pull/2205)
@@ -3021,7 +3021,7 @@ See all issues at: [1.2.1](https://github.com/detekt/detekt/milestone/52)
 -   Use double backtick for the in-line code - [#2022](https://github.com/detekt/detekt/pull/2022)
 -   EqualsAlwaysReturnsTrueOrFalse: The original exception message was: java.util.NoSuchElementException: Array is empty. - [#2021](https://github.com/detekt/detekt/issues/2021)
 -   Ignore sealed classes for utility class having public constructor rule - [#2016](https://github.com/detekt/detekt/pull/2016)
--   Better handling for the Suppresion of errors - [#2013](https://github.com/detekt/detekt/pull/2013)
+-   Better handling for the Suppression of errors - [#2013](https://github.com/detekt/detekt/pull/2013)
 -   Fix description of NoLineBreakBeforeAssignment - [#2011](https://github.com/detekt/detekt/pull/2011)
 -   Copy paste error in message in NoLineBreakBeforeAssignment.kt - [#2008](https://github.com/detekt/detekt/issues/2008)
 -   UtilityClassWithPublicConstructor should not be reported for sealed classes - [#2005](https://github.com/detekt/detekt/issues/2005)
