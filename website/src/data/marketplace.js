@@ -246,7 +246,7 @@ export const extensions = [
   },
   {
     title: "UseInvokeForOperator",
-    description: "This set contains rules that help to improve readability and to keep a single project-wide convention. UseInvokeForOperater rule detects cases when using invoke expression instead of a direct call with round brackets. The Invoke operator makes code more readable and the rule helps keeping it.",
+    description: "This set contains rules that help to improve readability and to keep a single project-wide convention. UseInvokeForOperator rule detects cases when using invoke expression instead of a direct call with round brackets. The Invoke operator makes code more readable and the rule helps keeping it.",
     repo: "https://github.com/Kiolk/Detekt-rules",
     ruleset: "kiolk-detekt-rules",
     rules: [
