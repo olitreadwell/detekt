@@ -177,7 +177,7 @@ class StringShouldBeRawStringSpec {
     }
 
     @Test
-    fun `does not report in case of of violations in same parent expression`() {
+    fun `does not report in case of violations in same parent expression`() {
         val code = """
             operator fun String.not() = true
             val totalSize = (!"\n\n").toString() + "\n\n\n"

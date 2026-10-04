@@ -2170,7 +2170,7 @@ class BracesOnIfStatementsSpec {
             )
 
         @TestFactory
-        fun `only multiline ifs are are flagged (complex)`() =
+        fun `only multiline ifs are flagged (complex)`() =
             testCombinations(
                 singleLine = BracePolicy.Never.config,
                 multiLine = BracePolicy.Always.config,
@@ -2189,7 +2189,7 @@ class BracesOnIfStatementsSpec {
             )
 
         @TestFactory
-        fun `only multiline ifs are are flagged (simple)`() =
+        fun `only multiline ifs are flagged (simple)`() =
             testCombinations(
                 singleLine = BracePolicy.Never.config,
                 multiLine = BracePolicy.Always.config,

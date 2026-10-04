@@ -61,7 +61,7 @@ import org.jetbrains.kotlin.psi.psiUtil.parents
  * - Nested class references without packages (e.g., Outer.Inner)
  * - Fully qualified names that were ignored by configuration
  *
- * See [PMD UnnecessaryFullyQualifiedName](https://pmd.github.io/latest/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname)
+ * See [PMD UnnecessaryFullyQualifiedName](https://pmd.github.io/pmd/pmd_rules_java_codestyle.html#unnecessaryfullyqualifiedname)
  * for a similar rule in the Java ecosystem.
  *
  * <noncompliant>
