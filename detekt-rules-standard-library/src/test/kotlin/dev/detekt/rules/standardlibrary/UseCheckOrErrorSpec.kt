@@ -12,7 +12,7 @@ class UseCheckOrErrorSpec(val env: KotlinEnvironmentContainer) {
     val subject = UseCheckOrError(Config.empty)
 
     @Test
-    fun `reports if a an IllegalStateException is thrown`() {
+    fun `reports if an IllegalStateException is thrown`() {
         val code = """
             fun x(a: Int) {
                 println("something")
@@ -24,7 +24,7 @@ class UseCheckOrErrorSpec(val env: KotlinEnvironmentContainer) {
     }
 
     @Test
-    fun `reports if a an IllegalStateException is thrown conditionally in a block`() {
+    fun `reports if an IllegalStateException is thrown conditionally in a block`() {
         val code = """
             fun x(a: Int) {
                 println("something")
@@ -38,7 +38,7 @@ class UseCheckOrErrorSpec(val env: KotlinEnvironmentContainer) {
     }
 
     @Test
-    fun `reports if a an IllegalStateException is thrown with an error message`() {
+    fun `reports if an IllegalStateException is thrown with an error message`() {
         val code = """
             fun x(a: Int) {
                 println("something")
@@ -50,7 +50,7 @@ class UseCheckOrErrorSpec(val env: KotlinEnvironmentContainer) {
     }
 
     @Test
-    fun `reports if a an IllegalStateException is thrown as default case of a when expression`() {
+    fun `reports if an IllegalStateException is thrown as default case of a when expression`() {
         val code = """
             fun x(a: Int) =
                 when (a) {
