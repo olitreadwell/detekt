@@ -913,6 +913,68 @@ class MissingUseCallSpec(private val env: KotlinEnvironmentContainer) {
         }
 
         @Test
+        fun `does not report _Closeable_ assigned to local variable and later used with _use_`() {
+            val code = """
+                import java.io.Closeable
+
+                class Resource : Closeable {
+                    override fun close() { /* no-op */ }
+                }
+
+                fun createResource(): Resource = Resource()
+
+                fun test() {
+                    val resource = createResource()
+                    resource.use { /* no-op */ }
+                }
+            """.trimIndent()
+            val findings = subject.lintWithContext(env, code)
+            assertThat(findings).isEmpty()
+        }
+
+        @Test
+        fun `does not report _Closeable_ assigned to local variable and used with _use_ after other statements`() {
+            val code = """
+                import java.io.Closeable
+
+                class Resource : Closeable {
+                    override fun close() { /* no-op */ }
+                }
+
+                fun createResource(): Resource = Resource()
+
+                fun test() {
+                    val resource = createResource()
+                    val intermediate = 42
+                    println(intermediate)
+                    resource.use { /* no-op */ }
+                }
+            """.trimIndent()
+            val findings = subject.lintWithContext(env, code)
+            assertThat(findings).isEmpty()
+        }
+
+        @Test
+        fun `does report _Closeable_ assigned to local variable and later used without _use_`() {
+            val code = """
+                import java.io.Closeable
+
+                class Resource : Closeable {
+                    override fun close() { /* no-op */ }
+                }
+
+                fun createResource(): Resource = Resource()
+
+                fun test() {
+                    val resource = createResource()
+                    println(resource)
+                }
+            """.trimIndent()
+            val findings = subject.lintWithContext(env, code)
+            assertThat(findings).hasSize(1)
+        }
+
+        @Test
         fun `does report _Closeable_ assigned to local variable inside function`() {
             val code = """
                 ${myClosable()}
