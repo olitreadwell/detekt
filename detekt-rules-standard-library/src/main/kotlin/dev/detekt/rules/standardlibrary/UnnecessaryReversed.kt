@@ -17,7 +17,7 @@ import org.jetbrains.kotlin.psi.KtExpression
 import org.jetbrains.kotlin.psi.psiUtil.collectDescendantsOfType
 
 /**
- * If a sort operation followed by a reverse operation or vise versa should be avoided, and both statements
+ * If a sort operation followed by a reverse operation or vice versa should be avoided, and both statements
  * should be replaced by single equivalent sort operation.
  *
  * <noncompliant>
@@ -34,7 +34,7 @@ import org.jetbrains.kotlin.psi.psiUtil.collectDescendantsOfType
 class UnnecessaryReversed(config: Config) :
     Rule(
         config,
-        "Use single sort operation instead of sorting followed by a reverse operation or vise-versa, " +
+        "Use single sort operation instead of sorting followed by a reverse operation or vice-versa, " +
             "eg. use `.sortedByDescending { .. }` instead of `.sortedBy { }.asReversed()`",
     ),
     RequiresAnalysisApi {

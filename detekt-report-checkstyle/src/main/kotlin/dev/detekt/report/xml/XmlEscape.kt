@@ -42,7 +42,7 @@ object XmlEscape {
      *
      * This escape will be performed by replacing those chars by the corresponding XML Character Entity References
      * (e.g. <tt>'&amp;lt;'</tt>) when such CER exists for the replaced character, and replacing by a hexadecimal
-     * character reference (e.g. <tt>'&amp;#x2430;'</tt>) when there there is no CER for the replaced character.
+     * character reference (e.g. <tt>'&amp;#x2430;'</tt>) when there is no CER for the replaced character.
      *
      * This method is **thread-safe**.
 

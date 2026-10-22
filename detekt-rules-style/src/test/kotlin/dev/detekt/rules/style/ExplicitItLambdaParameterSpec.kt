@@ -54,7 +54,7 @@ class ExplicitItLambdaParameterSpec {
         }
 
         @Test
-        fun `does not report when parameter type is declared explicitly for un-inferrable lambda`() {
+        fun `does not report when parameter type is declared explicitly for un-inferable lambda`() {
             val findings =
                 subject.lint(
                     """
@@ -75,7 +75,7 @@ class ExplicitItLambdaParameterSpec {
         }
 
         @Test
-        fun `does not report when parameter type is declared explicitly for un-inferrable lambda wrapped in paren`() {
+        fun `does not report when parameter type is declared explicitly for un-inferable lambda wrapped in paren`() {
             val findings =
                 subject.lint(
                     """
