@@ -501,7 +501,7 @@ class UnnecessaryInnerClassSpec(val env: KotlinEnvironmentContainer) {
     }
 
     @Nested
-    inner class `inner reffering other inner class` {
+    inner class `inner referring other inner class` {
         @Test
         fun `reports with nested empty classes`() {
             val code = """

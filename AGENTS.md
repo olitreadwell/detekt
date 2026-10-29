@@ -197,7 +197,7 @@ This project is licensed under the [Apache License 2.0](LICENSE). By contributin
 - [Contributing Guide](.github/CONTRIBUTING.md) - Full contribution guidelines
 - [Code of Conduct](.github/CODE_OF_CONDUCT.md) - Community standards
 - [Security Policy](SECURITY.md) - Vulnerability reporting
-- [Type Resolution Guide](website/docs/gettingstarted/type-resolution.md)
+- [Type Resolution Guide](website/docs/gettingstarted/type-resolution.mdx)
 
 ---
 

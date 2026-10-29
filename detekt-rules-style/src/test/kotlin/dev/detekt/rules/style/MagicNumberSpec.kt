@@ -475,7 +475,7 @@ class MagicNumberSpec {
     }
 
     @Nested
-    inner class `a magic number number in a constructor call` {
+    inner class `a magic number in a constructor call` {
 
         @Test
         fun `should report`() {

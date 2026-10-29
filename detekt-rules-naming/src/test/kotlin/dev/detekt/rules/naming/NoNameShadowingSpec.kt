@@ -211,7 +211,7 @@ class NoNameShadowingSpec(val env: KotlinEnvironmentContainer) {
                 fun apply(settings: Any) {
                     settings.beforeProject {
                         val f = listOf<String>()
-                        f.map { java.io.File("soem path") }
+                        f.map { java.io.File("some path") }
                     }
                 }
         

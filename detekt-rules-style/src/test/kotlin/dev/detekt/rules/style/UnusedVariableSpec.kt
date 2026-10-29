@@ -320,7 +320,7 @@ class UnusedVariableSpec(val env: KotlinEnvironmentContainer) {
     }
 
     @Nested
-    inner class `variable in lamda` {
+    inner class `variable in lambda` {
 
         @Test
         fun `reports unused variable in lambda`() {
