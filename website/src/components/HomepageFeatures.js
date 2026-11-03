@@ -6,6 +6,7 @@ const FeatureList = [
   {
     title: 'Your companion for cleaner Kotlin',
     image: 'img/home/detekt-logo.svg',
+    imageAlt: 'detekt logo',
     description: (
       <>
         detekt helps you write cleaner Kotlin code so you can focus on what
@@ -16,6 +17,7 @@ const FeatureList = [
   {
     title: 'Integrate in any project',
     image: 'img/home/gradle-logo.svg',
+    imageAlt: 'Gradle logo',
     description: (
       <>
         detekt comes with a set of plugins that helps you configure it easily in your
@@ -27,6 +29,7 @@ const FeatureList = [
   {
     title: 'Easy to extend',
     image: 'img/home/plugin-logo.svg',
+    imageAlt: 'Plugin icon',
     description: (
       <>
         detekt can be easily extended with custom rules that helps you track and
@@ -37,6 +40,7 @@ const FeatureList = [
   {
     title: 'Community Driven',
     image: 'img/home/github-logo.svg',
+    imageAlt: 'GitHub logo',
     description: (
       <>
         detekt is entirely open-source and developed by the community. Join us
@@ -46,11 +50,11 @@ const FeatureList = [
   },
 ];
 
-function Feature({title, image, description}) {
+function Feature({title, image, imageAlt, description}) {
   return (
     <div className={clsx('col col--6')}>
       <div className="text--center">
-        <img className={styles.featureImg} src={image} alt={image} />
+        <img className={styles.featureImg} src={image} alt={imageAlt} />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
