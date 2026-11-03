@@ -2,13 +2,12 @@ import com.gradle.develocity.agent.gradle.test.DevelocityTestConfiguration
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.jetbrains.kotlin.gradle.dsl.JvmDefaultMode
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.tasks.UsesKotlinJavaToolchain
 
 plugins {
     id("packaging")
     kotlin("jvm")
     id("jacoco")
+    id("com.gradleup.tapmoc")
 }
 
 val versionCatalog = versionCatalogs.named("libs")
@@ -56,12 +55,8 @@ tasks.withType<Test>().configureEach {
     }
 }
 
-val jvmTargetVersion = versionCatalog.findVersion("jvm-target").get().requiredVersion
-val jvmMajorVersion = jvmTargetVersion.toIntOrNull() ?: 8
-
 kotlin {
     compilerOptions {
-        jvmTarget = JvmTarget.fromTarget(jvmTargetVersion)
         extraWarnings = true
         allWarningsAsErrors = providers.gradleProperty("warningsAsErrors").orNull.toBoolean()
         if (project.name != "detekt-gradle-plugin") {
@@ -72,24 +67,13 @@ kotlin {
             // Only enable progressive mode in non-DGP modules. DGP doesn't compile with latest language version so
             // progressive mode is not appropriate.
             progressiveMode = true
+
+            // DGP compiles with Kotlin 2.1.21. Support for this flag was added in 2.3.0.
+            freeCompilerArgs.add("-Xreturn-value-checker=check")
         } else {
             freeCompilerArgs.add("-Xjvm-default=all")
         }
     }
-}
-
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinJvmCompile>().configureEach {
-    compilerOptions {
-        jvmTarget = JvmTarget.fromTarget(jvmTargetVersion)
-    }
-}
-
-val javaLauncher = javaToolchains.launcherFor {
-    languageVersion = JavaLanguageVersion.of(versionCatalog.findVersion("java-compile-toolchain").get().requiredVersion)
-}
-
-project.tasks.withType<UsesKotlinJavaToolchain>().configureEach {
-    kotlinJavaToolchain.toolchain.use(javaLauncher)
 }
 
 testing {
@@ -100,36 +84,13 @@ testing {
     }
 }
 
-// Pretend AGP API, JUnit and detekt-rules-ktlint-wrapper target JVM 8. Required while detekt itself targets JVM 8 and these dependencies target newer JVM versions.
-dependencies {
-    components {
-        setOf(
-            "com.android.tools.build:gradle-api",
-            "com.android.tools.build:gradle-common-api",
-            "org.junit.jupiter:junit-jupiter",
-            "org.junit.jupiter:junit-jupiter-api",
-            "org.junit.jupiter:junit-jupiter-engine",
-            "org.junit.jupiter:junit-jupiter-params",
-            "org.junit.platform:junit-platform-commons",
-            "org.junit.platform:junit-platform-engine",
-            "org.junit.platform:junit-platform-launcher",
-            "dev.detekt:detekt-rules-ktlint-wrapper",
-        ).forEach {
-            withModule(it) {
-                allVariants {
-                    attributes {
-                        attribute(TargetJvmVersion.TARGET_JVM_VERSION_ATTRIBUTE, jvmMajorVersion)
-                    }
-                }
-            }
-        }
-    }
+tapmoc {
+    @Suppress("MagicNumber")
+    java(17)
 }
 
 java {
     withSourcesJar()
-    sourceCompatibility = JavaVersion.toVersion(jvmTargetVersion)
-    targetCompatibility = JavaVersion.toVersion(jvmTargetVersion)
     if (project.name !in setOf("detekt-gradle-plugin", "detekt-test-junit")) {
         // DGP uses different versions of kotlin-gradle-api in test runtime and compile time
         consistentResolution {

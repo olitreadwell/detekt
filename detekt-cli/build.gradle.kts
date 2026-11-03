@@ -28,8 +28,6 @@ dependencies {
     }
     runtimeOnly(projects.detektCore)
     runtimeOnly(projects.detektRules)
-    runtimeOnly(projects.detektReportComplexity)
-    runtimeOnly(projects.detektReportStatistics)
     runtimeOnly(projects.detektReportHtml)
     runtimeOnly(projects.detektReportMarkdown)
     runtimeOnly(projects.detektReportSarif)
@@ -71,6 +69,8 @@ tasks {
         filesMatching("META-INF/services/**") {
             duplicatesStrategy = DuplicatesStrategy.INCLUDE
         }
+        @Suppress("DEPRECATION") // This flag will be disabled and removed in the next major version of Shadow.
+        enableKotlinModuleRemapping = false
     }
 
     shadowDistZip {
@@ -79,6 +79,16 @@ tasks {
     shadowDistTar { enabled = false }
     distZip { enabled = false }
     distTar { enabled = false }
+
+    test {
+        dependsOn(shadowJar)
+
+        val detektJarPath = shadowJar.map { it.archiveFile.get().asFile.absolutePath }
+
+        doFirst {
+            systemProperty("detektJarPath", detektJarPath.get())
+        }
+    }
 
     val runWithHelpFlag = register<JavaExec>("runWithHelpFlag") {
         outputs.upToDateWhen { true }
