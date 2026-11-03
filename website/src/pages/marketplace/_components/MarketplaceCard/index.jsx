@@ -13,7 +13,7 @@ function MarketplaceCard(input) {
           <h3 className={styles.marketplaceCardTitle}>{extension.title}</h3>
           <ul className={styles.tagContainer}>
             {extension.tags.map((tag) => (
-              <MarketplaceCardTag tag={tag} />
+              <MarketplaceCardTag key={tag} tag={tag} />
             ))}
           </ul>
           <Link
@@ -32,22 +32,22 @@ function MarketplaceCard(input) {
           <Link href={extension.docs ?? extension.repo}>{extension.docs ?? extension.repo}</Link>
           <p>{extension.description}</p>
           {extension.rules && (
-            <p>
+            <div>
               <h5>Rules</h5>
               <p>
                 Uses type resolution:{" "}
                 <strong>{extension.usesTypeResolution.toString()}</strong>
               </p>
-              <p className={styles.marketplaceCardRules}>
+              <div className={styles.marketplaceCardRules}>
                 <ul>
                   {extension.rules.map((rule) => (
-                    <li>
+                    <li key={rule}>
                       <code>{rule}</code>
                     </li>
                   ))}
                 </ul>
-              </p>
-            </p>
+              </div>
+            </div>
           )}
         </div>
       </div>
