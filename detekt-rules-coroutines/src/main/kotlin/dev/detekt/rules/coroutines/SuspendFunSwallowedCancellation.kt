@@ -322,7 +322,7 @@ class SuspendFunSwallowedCancellation(config: Config) :
     }
 
     /**
-     * Checks wheter this catch clause starts with a
+     * Checks whether this catch clause starts with a
      * `if (e is CancellationException) currentCoroutineContext().ensureActive()`
      */
     @Suppress("ReturnCount") // this seems way cleaner than nesting 3 levels deep

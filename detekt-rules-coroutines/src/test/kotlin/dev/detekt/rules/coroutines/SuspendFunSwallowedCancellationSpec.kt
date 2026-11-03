@@ -1597,7 +1597,7 @@ class SuspendFunSwallowedCancellationSpec(private val env: KotlinEnvironmentCont
             }
 
             @Test
-            fun `does report when suspending iterator is used withing inlined block`() {
+            fun `does report when suspending iterator is used within inlined block`() {
                 val code = """
                     import kotlinx.coroutines.MainScope
                     import kotlinx.coroutines.delay
@@ -1629,7 +1629,7 @@ class SuspendFunSwallowedCancellationSpec(private val env: KotlinEnvironmentCont
             }
 
             @Test
-            fun `does not report when suspending iterator is used withing non inlined block`() {
+            fun `does not report when suspending iterator is used within non inlined block`() {
                 val code = """
                     import kotlinx.coroutines.MainScope
                     import kotlinx.coroutines.delay

@@ -128,7 +128,7 @@ class MaxChainedCallsOnSameLineSpec(private val env: KotlinEnvironmentContainer)
     }
 
     @Test
-    fun `reports 4 calls on wrapped line with with a max of 3`() {
+    fun `reports 4 calls on wrapped line with a max of 3`() {
         val code = """
             val a = 0
                 .plus(0)

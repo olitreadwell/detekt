@@ -157,7 +157,7 @@ class MaxLineLengthSpec {
             
                     @Suppress("MaxLineLength")
                     val A_VERY_LONG_MULTI_LINE = $TQ
-                        This is anotehr very very very very very very very very, very long multiline String that will break the MaxLineLength"
+                        This is another very very very very very very very very, very long multiline String that will break the MaxLineLength"
                     $TQ.trimIndent()
                 }
             
@@ -166,7 +166,7 @@ class MaxLineLengthSpec {
             
                 @Suppress("MaxLineLength")
                 val longMultiLineField = $TQ
-                        This is anotehr very very very very very very very very
+                        This is another very very very very very very very very
                         very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very
                         very long multiline String that will break the MaxLineLength
                     $TQ.trimIndent()
@@ -174,7 +174,7 @@ class MaxLineLengthSpec {
                 @Suppress("MaxLineLength")
                 val longMultiLineFieldWithLineBreaks =
                     $TQ
-                        This is anotehr very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very
+                        This is another very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very very
                         very long multiline String with Line Break that will break the MaxLineLength
                     $TQ.trimIndent()
             

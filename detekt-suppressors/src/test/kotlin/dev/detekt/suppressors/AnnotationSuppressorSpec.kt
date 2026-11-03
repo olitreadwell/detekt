@@ -332,7 +332,7 @@ class AnnotationSuppressorSpec {
 
             @ParameterizedTest
             @MethodSource("getFile")
-            fun `Full qualified name name`(root: KtFile, analysisMode: AnalysisMode) {
+            fun `Full qualified name`(root: KtFile, analysisMode: AnalysisMode) {
                 val suppressor = annotationSuppressorFactory(
                     buildRule("ignoreAnnotated" to listOf("androidx.compose.runtime.Composable")),
                     analysisMode,
